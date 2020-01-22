@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, mergeMap, take, tap } from 'rxjs/operators';
 import { Group, Member } from 'src/app/domain/group.model';
@@ -58,5 +59,14 @@ export class GroupEditComponent implements OnInit, OnDestroy {
 
   deleteMember(member: Member) {
     this.group$.pipe(take(1)).subscribe(group => this.groupService.deleteMember(group, member));
+  }
+
+  random() {
+    this.members$
+      .pipe(
+        take(1),
+        map(members => members[_.random(0, members.length)])
+      )
+      .subscribe(member => console.log(`member=${member.label}`));
   }
 }
