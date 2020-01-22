@@ -1,0 +1,34 @@
+<div fxLayout="column" fxFlexFill fxLayoutGap="2em">
+  <mat-toolbar id="toolbar" color="primary" class="mat-elevation-z8">
+    <button mat-icon-button [routerLink]="['/groups']"><mat-icon>arrow_back</mat-icon></button>
+    <a routerLink="/" routerLinkActive="active" fxFlex="1 1 auto">Tirage au sort</a>
+    <button mat-button (click)="logout()" title="Déconnection"><mat-icon>exit_to_app</mat-icon></button>
+  </mat-toolbar>
+
+  <div [formGroup]="form" fxFlexFill fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="2em">
+    <mat-card formGroupName="group" *ngIf="group$ | async" class="mat-elevation-z5">
+      <mat-card-content>
+        <mat-form-field fxFlex="1 1 auto">
+          <input matInput placeholder="Nom du groupe" formControlName="name" />
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card formGroupName="member" class="mat-elevation-z5">
+      <mat-card-actions fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field fxFlex="1 1 auto">
+          <input matInput placeholder="Nom du membre du groupe" formControlName="label" autofocus (keyup.enter)="addMember()"
+        /></mat-form-field>
+        <button mat-icon-button (click)="addMember()"><mat-icon>add</mat-icon></button>
+      </mat-card-actions>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item *ngFor="let member of members$ | async" fxLayoutGap="10px">
+            <span fxFlex="1 1 auto">{{ member.label }}</span>
+            <button mat-icon-button (click)="deleteMember(member)"><mat-icon>delete</mat-icon></button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

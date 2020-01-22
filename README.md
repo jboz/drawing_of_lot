@@ -4,10 +4,6 @@ _Application offrant un moyen de faire des tirages au sort simplement et avec un
 
 TODO :
 
-- ui : authentification
-- ui : affichage de la liste des groupes
-- ui : edition/création groupe
-- ui : ajout/suppression membres
 - ui : get random action
 - ui : exclude
 - api: endpoint get random

@@ -10,14 +10,9 @@ import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
   {
-    path: 'group/:groupId',
-    canActivate: [AuthGuard],
-    loadChildren: () => import('./group-edit/groupe-edit.module').then(mod => mod.GroupEditModule)
-  },
-  {
     path: 'groups',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./group-list/groupe-list.module').then(mod => mod.GroupListModule)
+    loadChildren: () => import('./group-list/group-list.module').then(mod => mod.GroupListModule)
   },
   {
     path: 'login',
