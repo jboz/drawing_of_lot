@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
@@ -15,7 +16,7 @@ import { GroupService } from 'src/app/domain/group.service';
 export class GroupEditComponent implements OnInit, OnDestroy {
   form = this.fb.group({
     group: this.fb.group({ name: ['', Validators.required] }),
-    member: this.fb.group({ label: ['', Validators.required] })
+    member: this.fb.group({ label: [''] })
   });
 
   group$: Observable<Group>;
@@ -23,7 +24,7 @@ export class GroupEditComponent implements OnInit, OnDestroy {
 
   private groupSubscription: Subscription;
 
-  constructor(private fb: FormBuilder, private groupService: GroupService, private route: ActivatedRoute) {}
+  constructor(private fb: FormBuilder, private groupService: GroupService, private route: ActivatedRoute, private _snackBar: MatSnackBar) {}
 
   ngOnInit() {
     this.group$ = this.route.params.pipe(
@@ -65,8 +66,12 @@ export class GroupEditComponent implements OnInit, OnDestroy {
     this.members$
       .pipe(
         take(1),
-        map(members => members[_.random(0, members.length)])
+        map(members => members[_.random(0, members.length - 1)])
       )
-      .subscribe(member => console.log(`member=${member.label}`));
+      .subscribe(member =>
+        this._snackBar.open(member.label, 'X', {
+          duration: 5000
+        })
+      );
   }
 }

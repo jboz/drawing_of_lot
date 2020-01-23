@@ -1,14 +1,14 @@
-<div fxLayout="column" fxFlexFill>
-  <mat-toolbar id="toolbar" color="primary" class="mat-elevation-z8">
-    <a routerLink="/" routerLinkActive="active" fxFlex="1 1 auto">Tirage au sort</a>
+<div fxLayout="column" class="container" fxLayoutGap="1em">
+  <mat-toolbar color="primary" class="mat-elevation-z8">
+    <a mat-button routerLink="/" routerLinkActive="active" fxFlex="1 1 auto">Tirage au sort</a>
     <button mat-button (click)="logout()" title="Déconnection"><mat-icon>exit_to_app</mat-icon></button>
   </mat-toolbar>
 
-  <mat-card fxLayoutAlign="center center" style="margin-top: 1em;" class="mat-elevation-z0">
+  <mat-card fxLayoutAlign="center center" class="mat-elevation-z0" class="content">
     <mat-card-actions>
       <button mat-fab color="accent" (click)="create()"><mat-icon>add</mat-icon></button>
     </mat-card-actions>
-    <mat-card-content fxLayout="column" fxLayoutAlign="end end" fxFlexFill>
+    <mat-card-content fxLayout="column" fxFlexFill class="scrollbar">
       <table mat-table [dataSource]="groups$" class="mat-elevation-z8">
         <!-- Name Column -->
         <ng-container matColumnDef="name">

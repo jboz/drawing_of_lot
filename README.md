@@ -4,10 +4,10 @@ _Application offrant un moyen de faire des tirages au sort simplement et avec un
 
 TODO :
 
-- ui : get random action
-- ui : exclude
 - api: endpoint get random
 - ui : génération uuid pour intégration iftt
+- ui : pwa
+- ui : logo/couleur
 - ui : doc pour iftt
 - api: swagger like ?
 - api: ajout/suppression groupe

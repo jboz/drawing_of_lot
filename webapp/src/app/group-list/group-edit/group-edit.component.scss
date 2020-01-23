@@ -1,9 +1,17 @@
-div.mat-list-item-content {
-  width: 100%;
-}
+:host {
+  mat-toolbar {
+    a {
+      text-align: start;
+    }
+  }
 
-#random {
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
+  div.mat-list-item-content {
+    width: 100%;
+  }
+
+  #random {
+    position: fixed;
+    top: 5em;
+    right: 1em;
+  }
 }

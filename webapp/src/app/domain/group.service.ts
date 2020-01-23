@@ -55,6 +55,9 @@ export class GroupService {
   }
 
   public addMember$(group: Group, member: Member) {
+    if (!member.label) {
+      throw 'Member label is mandatory';
+    }
     return this.userService.user$.pipe(
       take(1),
       mergeMap(user =>
