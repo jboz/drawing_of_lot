@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 4410",
-    "build": "ng build",
+    "build": "ng build --prod",
+    "prebuild": "npm run lint",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "firebase deploy --only hosting",
+    "predeploy": "npm run build"
   },
   "private": true,
   "prettier": {

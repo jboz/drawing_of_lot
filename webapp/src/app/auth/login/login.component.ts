@@ -3,7 +3,7 @@ import { FirebaseUISignInSuccessWithAuthResult } from 'firebaseui-angular';
 import { UserService } from '../user/user.service';
 
 @Component({
-  selector: 'lib-login',
+  selector: 'app-login',
   template: `
     <firebase-ui (signInSuccessWithAuthResult)="successCallback($event)"></firebase-ui>
   `

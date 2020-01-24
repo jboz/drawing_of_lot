@@ -24,7 +24,7 @@ export class GroupListComponent implements OnInit {
 
   ngOnInit() {}
 
-  public logout() {
+  logout() {
     this.userService.disconnect();
   }
 

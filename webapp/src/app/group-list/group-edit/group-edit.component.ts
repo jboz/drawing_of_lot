@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, mergeMap, take, tap } from 'rxjs/operators';
+import { UserService } from 'src/app/auth/user/user.service';
 import { Group, Member } from 'src/app/domain/group.model';
 import { GroupService } from 'src/app/domain/group.service';
 
@@ -24,11 +25,17 @@ export class GroupEditComponent implements OnInit, OnDestroy {
 
   private groupSubscription: Subscription;
 
-  constructor(private fb: FormBuilder, private groupService: GroupService, private route: ActivatedRoute, private _snackBar: MatSnackBar) {}
+  constructor(
+    private userService: UserService,
+    private fb: FormBuilder,
+    private groupService: GroupService,
+    private route: ActivatedRoute,
+    private snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {
     this.group$ = this.route.params.pipe(
-      mergeMap(params => this.groupService.group$(params['groupId'])),
+      mergeMap(params => this.groupService.group$(params.groupId)),
       tap(group => this.form.get('group').patchValue(group))
     );
     this.members$ = this.group$.pipe(mergeMap(group => this.groupService.members$(group)));
@@ -43,6 +50,10 @@ export class GroupEditComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.groupSubscription.unsubscribe();
+  }
+
+  logout() {
+    this.userService.disconnect();
   }
 
   addMember() {
@@ -69,7 +80,7 @@ export class GroupEditComponent implements OnInit, OnDestroy {
         map(members => members[_.random(0, members.length - 1)])
       )
       .subscribe(member =>
-        this._snackBar.open(member.label, 'X', {
+        this.snackBar.open(member.label, 'X', {
           duration: 5000
         })
       );

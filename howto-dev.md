@@ -22,3 +22,13 @@ export const firebaseConfig = {
   appId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 };
 ```
+
+3. configurer l'accès firebase côté functions
+
+Ouvrir la page [Compte de service](https://console.firebase.google.com/project/mon-projet/settings/serviceaccounts/adminsdk) de la console Firebase.
+
+Cliquer sur 'Générer une nouvelle clé clé privée'
+
+Placer le fichier télécharger dans le répertoire _functions/src_ et nommer le _firebase-config.json_.
+
+Dans le ficjier _functions/src/server.ts_ changer la propriété _databaseURL_.
