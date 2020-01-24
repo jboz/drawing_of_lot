@@ -4,7 +4,7 @@ _Application offrant un moyen de faire des tirages au sort simplement et avec un
 
 TODO :
 
-- api: endpoint get random
+- api: intégration google assistant
 - ui : génération uuid pour intégration iftt
 - ui : pwa
 - ui : logo/couleur
