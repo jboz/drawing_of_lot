@@ -1,6 +1,8 @@
 import { UnauthorizedError } from 'actions-on-google';
 import admin from 'firebase-admin';
+import Fuse from 'fuse.js';
 import random from 'lodash/random';
+import { Group } from './group.model';
 import { NotFoundError } from './not-found.error';
 import { User } from './user.model';
 
@@ -35,15 +37,15 @@ export const byGroupName = (userId: string, groupName: string): Promise<string> 
       admin
         .firestore()
         .collection(`/users/${userId}/groups`)
-        .where('name', '==', groupName)
-        .limit(1)
         .get()
     )
+    .then(results => results.docs.map(doc => ({ ...doc.data(), id: doc.id } as Group)))
+    .then(groups => new Fuse(groups, { keys: ['name'] }).search(groupName))
     .then(result => {
-      if (result.size === 0) {
+      if (result.length === 0) {
         throw new NotFoundError(groupName);
       }
-      return result.docs[0];
+      return result[0];
     })
     .then(group =>
       admin
