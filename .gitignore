@@ -1,3 +1,4 @@
 *.log
 firebase-config.*
 .firebase
+dialogflow-config.*
