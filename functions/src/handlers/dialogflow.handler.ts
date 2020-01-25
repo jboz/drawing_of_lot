@@ -1,5 +1,6 @@
 import { Contexts, dialogflow, DialogflowApp, DialogflowConversation } from 'actions-on-google';
 import { NotFoundError } from '../domain/not-found.error';
+import { TooManyResultError } from '../domain/too-many-result.error';
 import HelloIntentHandler from './intent/hello.intent.handler';
 import IntentHandler from './intent/intent.handler';
 import RandomIntentHandler from './intent/random.intent.handler';
@@ -13,6 +14,12 @@ const app: DialogflowApp<any, any, Contexts, DialogflowConversation<{ uid: strin
 app.catch((conv: any, error: any) => {
   if (error instanceof NotFoundError) {
     return conv.ask(`Le groupe '${error.message}' n'a pas été trouvé.\nAssurez-vous qu'il existe bien.`);
+  }
+  if (error instanceof TooManyResultError) {
+    return conv.ask(
+      `La recherche du groupe '${error.message}' à renvoyer plusieurs résults.\n
+      Assurez-vous que le nom du groupe soit facilement identifiable.`
+    );
   }
   console.error(error);
   return conv.ask(`Une erreur est survenue.\nPouvez-vous répéter la question?`);

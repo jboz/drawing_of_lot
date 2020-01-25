@@ -4,6 +4,7 @@ import Fuse from 'fuse.js';
 import random from 'lodash/random';
 import { Group } from './group.model';
 import { NotFoundError } from './not-found.error';
+import { TooManyResultError } from './too-many-result.error';
 import { User } from './user.model';
 
 export const byGroupId = (userId: string, groupId: string, token: string): Promise<string> =>
@@ -44,6 +45,9 @@ export const byGroupName = (userId: string, groupName: string): Promise<string> 
     .then(result => {
       if (result.length === 0) {
         throw new NotFoundError(groupName);
+      }
+      if (result.length > 1) {
+        throw new TooManyResultError(groupName);
       }
       return result[0];
     })

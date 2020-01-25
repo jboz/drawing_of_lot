@@ -1,7 +1,7 @@
 export class NotFoundError extends Error {
-  constructor(groupeName: string) {
+  constructor(groupName: string) {
     super();
-    this.name = 'NorFoundEror';
-    this.message = groupeName;
+    this.name = 'NotFoundError';
+    this.message = groupName;
   }
 }
