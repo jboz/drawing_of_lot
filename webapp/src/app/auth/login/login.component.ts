@@ -4,9 +4,8 @@ import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-login',
-  template: `
-    <firebase-ui (signInSuccessWithAuthResult)="successCallback($event)"></firebase-ui>
-  `
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   constructor(private userService: UserService) {

@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { firebase, firebaseui, FirebaseUIModule } from 'firebaseui-angular';
-import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
 const firebaseUiAuthConfig = {
@@ -29,7 +28,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LoginComponent],
-  imports: [CommonModule, LoginRoutingModule, FirebaseUIModule.forRoot(firebaseUiAuthConfig), RouterModule.forChild(routes)],
+  imports: [CommonModule, FirebaseUIModule.forRoot(firebaseUiAuthConfig), RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class LoginModule {}
