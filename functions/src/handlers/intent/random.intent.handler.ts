@@ -15,6 +15,6 @@ export default class RandomIntentHandler implements IntentHandler {
       .auth()
       .getUserByEmail(conv.user.email || '')
       .then(user => byGroupName(user.uid, params.group))
-      .then(member => conv.ask(`La personne tiré au sort est : ${member}`));
+      .then(member => conv.ask(`Le résultat du tirage au sort est : ${member}`));
   }
 }

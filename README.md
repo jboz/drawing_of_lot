@@ -4,14 +4,9 @@ _Application offrant un moyen de faire des tirages au sort simplement et avec un
 
 TODO :
 
-- api: intégration google assistant
 - ui : génération uuid pour intégration iftt
-- ui : pwa
 - ui : logo/couleur
 - ui : doc pour iftt
-- api: swagger like ?
-- api: ajout/suppression groupe
-- api: ajout/suppression membres
 
 ## Développeurs
 
