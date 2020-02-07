@@ -6,3 +6,7 @@ export interface Group {
 export interface Member {
   label: string;
 }
+export interface Purpose {
+  id: string;
+  label: string;
+}

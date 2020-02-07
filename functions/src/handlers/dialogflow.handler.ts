@@ -17,8 +17,8 @@ app.catch((conv: any, error: any) => {
   }
   if (error instanceof TooManyResultError) {
     return conv.ask(
-      `La recherche du groupe '${error.message}' à renvoyer plusieurs résults.\n
-      Assurez-vous que le nom du groupe soit facilement identifiable.`
+      `La recherche du groupe ou du propos à renvoyer plusieurs résults.\n
+      Assurez-vous que le nom du groupe ou du propos soit facilement identifiable.`
     );
   }
   console.error(error);
