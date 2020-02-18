@@ -6,7 +6,10 @@
     "start": "ng serve --open --port 4410",
     "build": "ng build --prod",
     "prebuild": "npm run lint",
-    "test": "ng test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand",
+    "test:coverage": "jest --coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "firebase deploy --only hosting",
@@ -18,6 +21,25 @@
     "semi": true,
     "singleQuote": true,
     "printWidth": 140
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupJest.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "<rootDir>/tsconfig.spec.json",
+        "stringifyContentPathRegex": "\\.html$",
+        "astTransformers": [
+          "<rootDir>/node_modules/jest-preset-angular/InlineHtmlStripStylesTransformer"
+        ]
+      }
+    }
   },
   "dependencies": {
     "@angular/animations": "8.2.14",
@@ -48,18 +70,11 @@
     "@angular/cli": "8.3.23",
     "@angular/compiler-cli": "8.2.14",
     "@angular/language-service": "8.2.14",
+    "@types/jest": "^25.1.0",
     "@types/node": "8.9.4",
-    "@types/jasmine": "3.3.8",
-    "@types/jasminewd2": "2.0.3",
     "codelyzer": "5.0.0",
-    "jasmine-core": "3.4.0",
-    "jasmine-spec-reporter": "4.2.1",
-    "karma": "4.1.0",
-    "karma-chrome-launcher": "2.2.0",
-    "karma-coverage-istanbul-reporter": "2.0.1",
-    "karma-jasmine": "2.0.1",
-    "karma-jasmine-html-reporter": "1.4.0",
-    "protractor": "5.4.0",
+    "jest": "^25.1.0",
+    "jest-preset-angular": "^8.0.0",
     "ts-node": "7.0.0",
     "tslint": "5.15.0",
     "typescript": "3.5.3"
