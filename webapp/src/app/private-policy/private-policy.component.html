@@ -1,44 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tirage au sort - Private Policy</title>
-
-    <link rel="icon" href="https://drawing-of-lot.ifocusit.ch/assets/icons/icon-512x512.png" sizes="512x512" />
-    <link rel="icon" href="https://drawing-of-lot.ifocusit.ch/assets/icons/icon-192x192.png" sizes="192x192" />
-    <link rel="icon" href="https://drawing-of-lot.ifocusit.ch/assets/icons/icon-128x128.png" sizes="128x128" />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
-    />
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.grey-pink.min.css" />
-    <!-- copy from https://www.redditinc.com/policies/privacy-policy -->
-    <style>
-      body {
-        margin: 0;
-        font-family: Roboto, 'Helvetica Neue', sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <a class="mdl-navigation__link"side>
-      <nav class="mdl-navigation">
-        <ul>
-          <li><a class="mdl-navigation__link" href="#collect">What We Collect</a></li>
-          <li><a class="mdl-navigation__link" href="#use">How We Use Information About You</a></li>
-          <li><a class="mdl-navigation__link" href="#shared">How Information About You is Shared</a></li>
-          <li><a class="mdl-navigation__link" href="#partners">Ads and Analytics Partners</a></li>
-          <li><a class="mdl-navigation__link" href="#choices">Your Choices</a></li>
-          <li><a class="mdl-navigation__link" href="#other">Other Information</a></li>
-          <li><a class="mdl-navigation__link" href="#">Contact Us</a></li>
-        </ul>
-      </nav>
-    </aside>
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+  <aside fxFlex="300px">
+    <nav class="mdl-navigation">
+      <ul>
+        <li><a mat-button (click)="scrollToElement(collect)">What We Collect</a></li>
+        <li><a mat-button (click)="scrollToElement(use)">How We Use Information About You</a></li>
+        <li><a mat-button (click)="scrollToElement(shared)">How Information About You is Shared</a></li>
+        <li><a mat-button (click)="scrollToElement(partners)">Ads and Analytics Partners</a></li>
+        <li><a mat-button (click)="scrollToElement(choices)">Your Choices</a></li>
+        <li><a mat-button (click)="scrollToElement(other)">Other Information</a></li>
+        <li><a mat-button (click)="scrollToElement(contact)">Contact Us</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main fxFlex="1 1 auto">
     <section>
       <h1>Private Policy</h1>
-      <h2>Effective January 10, 2020. Last Revised January 10, 2020</h2>
+      <h3>Effective January 10, 2020. Last Revised January 10, 2020</h3>
       <p>My Company operates the https://drawing-of-lot.ifocusit.ch website, which provides the SERVICE.</p>
       <p>
         This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information
@@ -52,13 +29,13 @@
       <p>
         The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at
         http://mysite.com, unless otherwise defined in this Privacy Policy. Our Privacy Policy was created with the help of the
-        <a class="mdl-navigation__link" href="https://www.privacypolicytemplate.net">Privacy Policy Template</a> and the
-        <a class="mdl-navigation__link" href="https://www.privacy-policy-template.com/">Online Privacy Policy Template</a>.
+        <a href="https://www.privacypolicytemplate.net">Privacy Policy Template</a> and the
+        <a href="https://www.privacy-policy-template.com/">Online Privacy Policy Template</a>.
       </p>
     </section>
-    <section id="collect">
+    <section #collect>
       <h1>What We Collect</h1>
-      <h2>Information You Provide to Us</h2>
+      <h3>Information You Provide to Us</h3>
       <p>We collect information you provide to us directly when you use the Services. This includes:</p>
       <p>
         Account information. To create an account, you must provide a username and password. Your username is public, and it doesn’t have to
@@ -69,14 +46,14 @@
         Actions you take. We collect information about the actions you take when using the Services. This includes your interactions with
         content.
       </p>
-      <h2>Information We Collect Automatically</h2>
+      <h3>Information We Collect Automatically</h3>
       <p>When you access or use our Services, we may also automatically collect information about you. This includes:</p>
       <p>
         Log and usage data. We may log information when you access and use the Services. This may include your IP address, user-agent
         string, browser type, operating system, referral URLs, device information (e.g., device IDs), pages visited, links clicked, the
         requested URL, hardware settings, and search terms.
       </p>
-      <h2>Information Collected from Other Sources</h2>
+      <h3>Information Collected from Other Sources</h3>
       <p>
         We may receive information about you from other sources, including from other users and third parties, and combine that information
         with the other information we have about you. For example, we may receive demographic or interest information about you from third
@@ -97,9 +74,9 @@
         control how we use this information to personalize the Services for you by adjusting your preferences here.
       </p>
     </section>
-    <section id="use">
+    <section #use>
       <h1>How We Use Information About You</h1>
-      <h2>We use information about you to:</h2>
+      <h3>We use information about you to:</h3>
       <ul>
         <li>Provide, maintain, and improve the Services;</li>
         <li>Research and develop new services;</li>
@@ -120,45 +97,46 @@
         </li>
       </ul>
     </section>
-    <section id="shared">
+    <section #shared>
       <h1>How Information About You Is Shared</h1>
-      <h2>Nothing is shared !</h2>
+      <h3>Nothing is shared !</h3>
       <p>We submit nothing to anybody</p>
     </section>
-    <section id="partners">
+    <section #partners>
       <h1>Ads and Analytics Partners</h1>
       <p>No ads are displayed</p>
-      <h2>Analytics Partners</h2>
+      <h3>Analytics Partners</h3>
       <p>
-        We use analytics partners (such as <a class="mdl-navigation__link" href="https://www.google.com/policies/privacy/partners/">Google Analytics</a>) to help analyze
-        usage and traffic for our Services. As an example, we may use analytics partners to analyze and measure, in the aggregate, the
-        number of unique visitors to our Services.
+        We use analytics partners (such as
+        <a href="https://www.google.com/policies/privacy/partners/">Google Analytics</a>) to help analyze usage and traffic for our
+        Services. As an example, we may use analytics partners to analyze and measure, in the aggregate, the number of unique visitors to
+        our Services.
       </p>
     </section>
-    <section id="choices">
+    <section #choices>
       <h1>Your Choices</h1>
       <p>As a user, you have choices about how to protect and limit the collection, use, and disclosure of information about you.</p>
     </section>
-    <section id="other">
+    <section #other>
       <h1>Other Information</h1>
-      <h2>Information Security</h2>
+      <h3>Information Security</h3>
       <p>
         We take measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration, and
         destruction. For example, we use HTTPS while information is being transmitted. We also enforce technical and administrative access
         controls to limit which of our employees have access to non-public personal information.
       </p>
-      <h2>Data Retention</h2>
+      <h3>Data Retention</h3>
       <p>
         We store the information we collect for as long as it is necessary for the purpose(s) for which we originally collected it. We may
         retain certain information for legitimate business purposes or as required by law.
       </p>
-      <h2>Children</h2>
+      <h3>Children</h3>
       <p>
         Children under the age of 13 are not allowed to create an account or otherwise use the Services. Additionally, if you are in the
         EEA, you must be over the age required by the laws of your country to create an account or otherwise use the Services, or we need to
         have obtained verifiable consent from your parent or legal guardian.
       </p>
-      <h2>Changes to This Policy</h2>
+      <h3>Changes to This Policy</h3>
       <p>
         We may change this Privacy Policy from time to time. If we do, we will let you know by revising the date at the top of the policy.
         If we make a change to this policy that, in our sole discretion, is material, we will provide you with additional notice (such as
@@ -168,7 +146,7 @@
         effect, you agree to be bound by the revised policy.
       </p>
     </section>
-    <section id="contact">
+    <section #contact>
       <h1>Contact Us</h1>
       <p>
         To send a GDPR data subject request or CCPA consumer request, follow the steps in the “Other Information - Data Subject and Consumer
@@ -176,7 +154,5 @@
       </p>
       <p>If you have other questions about this Privacy Policy, please contact us at julienboz@gmail.com</p>
     </section>
-
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-  </body>
-</html>
+  </main>
+</div>

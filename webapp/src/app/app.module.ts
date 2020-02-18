@@ -19,6 +19,8 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./auth/login/login.module').then(mod => mod.LoginModule)
   },
+  { path: 'private-policy', loadChildren: () => import('./private-policy/private-policy.module').then(mod => mod.PrivatePolicyModule) },
+  { path: 'term-of-service', loadChildren: () => import('./term-of-service/term-of-service.module').then(mod => mod.TermOfServiceModule) },
   { path: '', redirectTo: '/groups', pathMatch: 'full' }
 ];
 
