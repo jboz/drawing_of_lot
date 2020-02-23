@@ -15,7 +15,6 @@ export default class RandomIntentHandler implements IntentHandler {
       throw new GroupUndefinedError();
     }
     const purpose = params.purpose || conv.user.storage.purpose;
-    console.log(`group=${group}, purpose=${purpose}, storage=${JSON.stringify(conv.user.storage)}`);
     return admin
       .auth()
       .getUserByEmail(conv.user.email || '')

@@ -14,7 +14,6 @@ export default class NextIntentHandler implements IntentHandler {
       throw new GroupUndefinedError();
     }
     const purpose = conv.user.storage.purpose;
-    console.log(`group=${group}, purpose=${purpose}, storage=${JSON.stringify(conv.user.storage)}`);
     return admin
       .auth()
       .getUserByEmail(conv.user.email || '')
