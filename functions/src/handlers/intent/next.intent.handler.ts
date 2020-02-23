@@ -2,19 +2,18 @@ import { Contexts, DialogflowConversation } from 'actions-on-google';
 import admin from 'firebase-admin';
 import { ConversationData } from '../../domain/conversation-data-model';
 import { GroupUndefinedError } from '../../domain/group-undefined.error';
-import { Parameters } from '../../domain/parameters.model';
 import { byGroupName } from '../../domain/random.service';
 import IntentHandler from './intent.handler';
 
-export default class RandomIntentHandler implements IntentHandler {
-  public name = 'random_intent';
+export default class NextIntentHandler implements IntentHandler {
+  public name = 'next_intent';
 
-  action(conv: DialogflowConversation<any, ConversationData, Contexts>, params: Parameters) {
-    const group = params.group || conv.user.storage.group;
+  action(conv: DialogflowConversation<any, ConversationData, Contexts>, params: any) {
+    const group = conv.user.storage.group;
     if (!group) {
       throw new GroupUndefinedError();
     }
-    const purpose = params.purpose || conv.user.storage.purpose;
+    const purpose = conv.user.storage.purpose;
     console.log(`group=${group}, purpose=${purpose}, storage=${JSON.stringify(conv.user.storage)}`);
     return admin
       .auth()

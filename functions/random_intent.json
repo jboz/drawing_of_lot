@@ -1,0 +1,381 @@
+{
+  "id": "d8d1f3cd-8df9-45f7-81c0-37b70e387e19",
+  "name": "random_intent",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": false,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "group",
+          "dataType": "@sys.any",
+          "isList": false,
+          "required": false,
+          "prompts": [],
+          "value": "$group",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "resetContexts": true
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort le nom d'un ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": null,
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors un nom d 'un ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": null,
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors une personne du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "d7c8d8eb-5cca-4947-9023-05d0a40ceeb7",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort ",
+          "userDefined": false
+        },
+        {
+          "text": "une",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " personne du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 1,
+      "id": "4bf0c579-9f64-4f0a-8631-5d72a0365099",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors un membre du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "ce48a45e-4aef-47d5-9fc2-1d23ae17dfec",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors un nom du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "6be578e0-6585-4cb9-8793-9f56be4f8ef2",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors un ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "c00da9ea-789f-4391-a489-dea989cbe1ff",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tu ressors une personne de ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "9bb9c03d-6b32-4ae5-85dc-4ba14e3cb12e",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Donne moi un nom de ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "2af7cf4a-b640-428a-baa4-41c830df5955",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort une personne de ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "cf0bbbbf-f46b-4bc5-a2bb-5a57e6dbd6eb",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort un ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "8fa11c29-f453-4278-8e4f-46fc0440aa53",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Donne moi une personne du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "31b53648-7c67-428b-b5b8-1a5ed4aaeed3",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Donne ",
+          "userDefined": false
+        },
+        {
+          "text": "moi",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "un",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " membre du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "05027d4c-eb2b-4263-9a57-2fff0b10d0ce",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort un nom du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "8121eea4-d202-4481-956a-6601ddbc04ae",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Tire au sort un membre du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": true,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 2,
+      "id": "694c100f-1a0c-4b48-a99e-df58144e41a1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Donne ",
+          "userDefined": false
+        },
+        {
+          "text": "moi",
+          "userDefined": false,
+          "meta": "@sys.ignore",
+          "alias": null
+        },
+        {
+          "text": " un nom du groupe ",
+          "userDefined": false
+        },
+        {
+          "text": "group",
+          "userDefined": false,
+          "alias": "group",
+          "meta": "@sys.any"
+        }
+      ],
+      "count": 0,
+      "id": "2ec70c3d-b2e4-4d1a-bce0-8a11e8f01249",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": true
+}

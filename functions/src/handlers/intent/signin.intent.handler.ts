@@ -1,3 +1,4 @@
+import { LinkOutSuggestion } from 'actions-on-google';
 import IntentHandler from './intent.handler';
 import admin = require('firebase-admin');
 
@@ -23,9 +24,11 @@ export default class SignInIntentHandler implements IntentHandler {
         }
       }
 
-      conv.ask(`Bonjour ${conv.user.profile.payload.name}.\nQue puis-je faire pour toi ?`);
+      return conv
+        .ask(`Bonjour ${conv.user.profile.payload.name}.\nQue puis-je faire pour toi ?`)
+        .add(new LinkOutSuggestion({ name: `Liste des groupes`, url: 'http://drawing-of-lot.ifocusit.ch/groups' }));
     } else {
-      conv.ask(`Vous devez vous identifier pour utiliser cette assistant, désolé.`);
+      return conv.ask(`Vous devez vous identifier pour utiliser cette assistant, désolé.`).close();
     }
   }
 }
