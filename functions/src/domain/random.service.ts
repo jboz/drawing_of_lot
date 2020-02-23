@@ -53,7 +53,7 @@ const getMemberRandom = (userId: string, groupId: string, purposeName?: string) 
     .collection(`/users/${userId}/groups/${groupId}/members`)
     .get()
     .then(snap => snap.docs.map(doc => ({ ...doc.data() } as Member)))
-    .then(members => {
+    .then(groupMembers => {
       if (purposeName) {
         return admin
           .firestore()
@@ -80,16 +80,16 @@ const getMemberRandom = (userId: string, groupId: string, purposeName?: string) 
               .then(snap => snap.docs.map(doc => ({ ...doc.data() } as Member)))
               .then(usesMembers => usesMembers.map(member => member.label))
               .then(usesMembers => {
-                if (usesMembers.length >= members.length) {
+                if (usesMembers.length >= groupMembers.length) {
                   return admin
                     .firestore()
                     .doc(`/users/${userId}/groups/${groupId}/purposes/${purpose.id}`)
                     .delete()
                     .then(() => createPurpose(userId, groupId, purpose.label))
                     .then(newPurpose => (purpose.id = newPurpose.id))
-                    .then(() => members);
+                    .then(() => groupMembers);
                 }
-                return members.filter(member => !usesMembers.includes(member.label));
+                return groupMembers.filter(member => !usesMembers.includes(member.label));
               })
               .then(members => members[random(0, members.length - 1)])
               .then(member =>
@@ -101,7 +101,7 @@ const getMemberRandom = (userId: string, groupId: string, purposeName?: string) 
               )
           );
       }
-      return members[random(0, members.length - 1)].label;
+      return groupMembers[random(0, groupMembers.length - 1)].label;
     });
 
 const createPurpose = (userId: string, groupId: string, purposeName: string): Promise<Purpose> => {
