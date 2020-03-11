@@ -1,5 +1,5 @@
-<div fxlayout="row" fxlayout.lt-md="column" fxlayoutalign="start stretch" fxlayoutgap="20px">
-  <aside fxflex="300px">
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="start stretch" fxLayoutGap="20px">
+  <aside fxFlex="300px">
     <nav class="mdl-navigation">
       <ul>
         <li><a mat-button (click)="scrollToElement(collect)">Ce que nous collectons</a></li>
@@ -11,7 +11,7 @@
       </ul>
     </nav>
   </aside>
-  <main fxflex="1 1 auto">
+  <main fxFlex="1 1 auto">
     <section>
       <h1>Politique privée</h1>
       <h3>En vigueur le 11 mars 2020. Dernière révision le 11 mars 2020</h3>
@@ -31,7 +31,7 @@
         confidentialité.
       </p>
     </section>
-    <section>
+    <section #collect>
       <h1>Ce que nous collectons</h1>
       <h3>Informations que vous nous fournissez</h3>
       <p>Nous collectons les informations que vous nous fournissez directement lorsque vous utilisez les Services. Ceci comprend:</p>
@@ -81,7 +81,7 @@
         façon dont nous utilisons ces informations pour personnaliser les Services pour vous en ajustant vos préférences ici.
       </p>
     </section>
-    <section>
+    <section #use>
       <h1>Comment nous utilisons les informations vous concernant</h1>
       <h3>Nous utilisons les informations vous concernant pour:</h3>
       <ul>
@@ -109,12 +109,12 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section #shared>
       <h1>Comment les informations vous concernant sont partagées</h1>
       <h3>Rien n'est partagé!</h3>
       <p>Nous ne soumettons rien à personne</p>
     </section>
-    <section>
+    <section #partners>
       <h1>Annonces et partenaires d'analyse</h1>
       <h3>Aucune annonce n'est affichée</h3>
       <h3>Partenaires Analytics</h3>
@@ -125,7 +125,7 @@
         nombre de visiteurs uniques à nos Services.
       </p>
     </section>
-    <section>
+    <section #other>
       <h1>les autres informations</h1>
       <h3>Sécurité de l'information</h3>
       <p>
@@ -156,7 +156,7 @@
         modifications de la politique de confidentialité, vous acceptez d'être lié par la politique révisée.
       </p>
     </section>
-    <section>
+    <section #contact>
       <h1>Nous contacter</h1>
       <p>
         Pour envoyer une demande concernant la RGPD ou une demande concernant l'ACCP, écrivez nous à l'adresse de messagerie ci-dessous.
