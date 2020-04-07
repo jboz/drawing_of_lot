@@ -1,0 +1,143 @@
+[
+  {
+    "id": "3f961e59-1757-49d3-91d7-3afa135ee25b",
+    "data": [
+      {
+        "text": "ok",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "6bbb65a4-23e7-4f5b-82bc-54ad7aaa2940",
+    "data": [
+      {
+        "text": "bye bye",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "726cddd5-33ff-485f-97bd-88478d63dd89",
+    "data": [
+      {
+        "text": "bye",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "42f83958-3049-457f-b069-7cb3c93bb431",
+    "data": [
+      {
+        "text": "tout bon",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ed2f2806-1374-47c4-add0-1b9b61ccc13e",
+    "data": [
+      {
+        "text": "ok, ",
+        "userDefined": false
+      },
+      {
+        "text": "merci",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ddd8661d-0f0b-447a-a7aa-7cb05aac2ac9",
+    "data": [
+      {
+        "text": "quitter",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cde81a38-bcc0-42e3-a3e9-9c010148eff5",
+    "data": [
+      {
+        "text": "ciao",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4f50c503-e9dd-4478-94e8-cb7d1568493f",
+    "data": [
+      {
+        "text": "c\u0027est bon",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "473e5c29-dde1-4c81-bfab-6d145c1eebe6",
+    "data": [
+      {
+        "text": "au revoir",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8146991d-fa69-4c4b-8fdf-4493429ee5ff",
+    "data": [
+      {
+        "text": "terminer",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a165fdcd-b1c9-4842-9af8-4ec06386732e",
+    "data": [
+      {
+        "text": "merci",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

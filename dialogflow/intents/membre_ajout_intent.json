@@ -1,0 +1,56 @@
+{
+  "id": "382881b9-44f3-4f80-b287-18dc1d035cdc",
+  "name": "membre_ajout_intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5c26dcf4-c3d4-457d-a836-9df59a792f99",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "member",
+          "value": "$member",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        },
+        {
+          "id": "15e6a4c5-b465-4185-86d2-bf46fd2b563b",
+          "required": false,
+          "dataType": "@sys.any",
+          "name": "group",
+          "value": "$group",
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "condition": "",
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

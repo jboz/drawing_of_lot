@@ -1,0 +1,71 @@
+[
+  {
+    "id": "3a76f6cf-f18a-4e59-aff5-21e3d2ed9317",
+    "data": [
+      {
+        "text": "Ajoute un groupe",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "007aeb7f-e88a-4f55-a02f-2cca6ab6488a",
+    "data": [
+      {
+        "text": "Crée un groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "afeef0f4-4c27-40a2-abbe-a27290c2923a",
+    "data": [
+      {
+        "text": "Ajoute le groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "366c755b-d102-401d-ab8a-0f6436d533d6",
+    "data": [
+      {
+        "text": "Crée ",
+        "userDefined": false
+      },
+      {
+        "text": "un",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " nouveau groupe",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

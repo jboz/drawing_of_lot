@@ -1,0 +1,96 @@
+[
+  {
+    "id": "96ea8049-3e2b-41a2-b7ee-ee55427a58b2",
+    "data": [
+      {
+        "text": "une",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " autre",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a513369e-f60f-4abc-a2eb-b7bebe5d0741",
+    "data": [
+      {
+        "text": "un",
+        "meta": "@sys.ignore",
+        "userDefined": false
+      },
+      {
+        "text": " autre",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "592f4626-d85e-4f4e-8d74-bc6d75c486f1",
+    "data": [
+      {
+        "text": "la suivante",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3c230509-279b-400a-a5f0-1ccdfeec28c4",
+    "data": [
+      {
+        "text": "la prochaine",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "caf69a50-b8c8-4053-be0c-2b6e77b054d6",
+    "data": [
+      {
+        "text": "et ensuite",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "13377b32-9839-4eb6-a2b8-236964182309",
+    "data": [
+      {
+        "text": "le prochaine",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d0d3efe0-a3a8-4df0-8206-dc2f3a7aa241",
+    "data": [
+      {
+        "text": "le suivant",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

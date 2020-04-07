@@ -1,0 +1,38 @@
+{
+  "id": "16b189f8-6ba8-4781-a536-24905e81f5f5",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "condition": "",
+          "speech": [
+            "J\u0027ai du mal à comprendre cette question. Pouvez-vous reformuler ?",
+            "J\u0027ai mal compris votre demande. Pouvez-vous la reformuler ?",
+            "Je n\u0027ai pas saisi ce que vous avez dit.  Pouvez-vous répéter ?",
+            "Je crois que je ne vous suis pas. Pouvez-vous reformuler  votre demande?",
+            "Je ne comprends pas de quoi vous me parlez. Pouvez-vous reformuler ?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

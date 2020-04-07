@@ -1,0 +1,92 @@
+[
+  {
+    "id": "0469c590-f626-4289-a4af-622e19e1f3c9",
+    "data": [
+      {
+        "text": "le groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8bff3498-7801-4124-ad26-5bf665a03f7f",
+    "data": [
+      {
+        "text": "montre moi le contenu du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "3af6df27-8c01-437a-8a1f-b25abb3668c0",
+    "data": [
+      {
+        "text": "affiche les membres du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8da0ecc9-e4d8-4b3a-803d-2941a1900f22",
+    "data": [
+      {
+        "text": "liste les membre du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2c5b441a-66f1-4097-9f60-04827dc69b95",
+    "data": [
+      {
+        "text": "ceux du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

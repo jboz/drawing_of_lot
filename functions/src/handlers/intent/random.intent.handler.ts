@@ -10,11 +10,11 @@ export default class RandomIntentHandler implements IntentHandler {
   public name = 'random_intent';
 
   action(conv: DialogflowConversation<any, ConversationData, Contexts>, params: Parameters) {
-    const group = params.group || conv.user.storage.group;
+    const group = params.group;
     if (!group) {
       throw new GroupUndefinedError();
     }
-    const purpose = params.purpose || conv.user.storage.purpose;
+    const purpose = params.purpose;
     return admin
       .auth()
       .getUserByEmail(conv.user.email || '')
