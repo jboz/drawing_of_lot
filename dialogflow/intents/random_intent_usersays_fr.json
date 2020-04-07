@@ -1,0 +1,186 @@
+[
+  {
+    "id": "2a3bcbbb-ce32-4861-9fe9-81e491c234b9",
+    "data": [
+      {
+        "text": "Tire au sort ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "b07c54ee-cbb6-4ac7-a052-5c5ea5cbc4ef",
+    "data": [
+      {
+        "text": "Tire au sort ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " pour ",
+        "userDefined": false
+      },
+      {
+        "text": "purpose",
+        "alias": "purpose",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "02fbb42f-5ec9-48d4-a8c0-9beb14ca1bb6",
+    "data": [
+      {
+        "text": "Tire au sort une personne du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " pour ",
+        "userDefined": false
+      },
+      {
+        "text": "purpose",
+        "alias": "purpose",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "bcb78b49-e684-4acf-b590-14410fdf9a04",
+    "data": [
+      {
+        "text": "Tire au sort une personne du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "a71d75ad-0b48-4e6b-8f05-dc2c95635f6e",
+    "data": [
+      {
+        "text": "Tire au sort un membre du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " pour ",
+        "userDefined": false
+      },
+      {
+        "text": "purpose",
+        "alias": "purpose",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "88ce4254-6c28-4372-84cf-6f0945115e9a",
+    "data": [
+      {
+        "text": "Tire au sort un membre du groupe ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2ffa01ef-1022-4403-8d8e-e9410cb73278",
+    "data": [
+      {
+        "text": "Tire au sort le nom ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "af3f7d66-3a71-4e1e-901c-9e5d0d2a2901",
+    "data": [
+      {
+        "text": "Tire au sort le nom ",
+        "userDefined": false
+      },
+      {
+        "text": "group",
+        "alias": "group",
+        "meta": "@sys.any",
+        "userDefined": true
+      },
+      {
+        "text": " pour ",
+        "userDefined": false
+      },
+      {
+        "text": "purpose",
+        "alias": "purpose",
+        "meta": "@sys.any",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

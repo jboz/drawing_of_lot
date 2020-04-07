@@ -1,0 +1,74 @@
+[
+  {
+    "id": "292dd2b1-a895-46ab-9946-c79c02f03d80",
+    "data": [
+      {
+        "text": "affiche les groupes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4ca9121e-b4b6-475b-b39b-55c67f9ba0f1",
+    "data": [
+      {
+        "text": "montre moi mes groupes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "4d8b0e7c-d0c5-43a5-891a-bab542cea6f3",
+    "data": [
+      {
+        "text": "groupes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "c76d5729-d77a-4448-a75b-e6b040d7a1f0",
+    "data": [
+      {
+        "text": "combien ais-je de groupe",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "e39592e6-aa44-4bb1-85c9-935f742bfbe2",
+    "data": [
+      {
+        "text": "quels sont les groupes existants",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fb09f967-f058-4670-8219-4cf0cc224684",
+    "data": [
+      {
+        "text": "liste les groupes",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
