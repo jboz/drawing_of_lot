@@ -1,0 +1,41 @@
+{
+  "id": "a52a6d4f-d40b-4e08-914f-f5e86e24f0ff",
+  "name": "End Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "fr",
+          "condition": "",
+          "speech": [
+            "OK, à bientôt",
+            "A la prochaine",
+            "Au plaisir",
+            "Je reste à votre service, à bientôt",
+            "Très bien, à votre service",
+            "Ravi de vous avoir servi",
+            "OK, à votre service!"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
