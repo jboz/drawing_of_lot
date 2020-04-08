@@ -12,6 +12,10 @@ mat-card-actions {
 
 table {
   width: 100%;
+
+  .group-name {
+    cursor: pointer;
+  }
 }
 
 td.mat-column-length {
@@ -19,5 +23,5 @@ td.mat-column-length {
 }
 
 td.mat-column-actions {
-  width: 80px;
+  width: 120px;
 }

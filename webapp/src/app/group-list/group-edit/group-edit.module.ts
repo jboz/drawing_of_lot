@@ -8,7 +8,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
 import { GroupEditComponent } from './group-edit.component';
@@ -20,8 +19,8 @@ import { GroupEditComponent } from './group-edit.component';
     RouterModule.forChild([
       {
         path: '',
-        component: GroupEditComponent
-      }
+        component: GroupEditComponent,
+      },
     ]),
     FlexLayoutModule,
     ReactiveFormsModule,
@@ -32,7 +31,6 @@ import { GroupEditComponent } from './group-edit.component';
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
-    MatSnackBarModule
-  ]
+  ],
 })
 export class GroupEditModule {}
