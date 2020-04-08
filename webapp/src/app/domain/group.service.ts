@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { MatSnackBar } from '@angular/material';
+import random from 'lodash/random';
 import { Observable } from 'rxjs';
-import { map, mergeMap, take } from 'rxjs/operators';
+import { map, mergeMap, take, tap } from 'rxjs/operators';
 import { UserService } from '../auth/user/user.service';
-import { Group, Member } from './group.model';
+import { Group, Member, Purpose } from './group.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GroupService {
-  constructor(private userService: UserService, private db: AngularFirestore) {}
+  constructor(private userService: UserService, private db: AngularFirestore, private snackBar: MatSnackBar) {}
 
   public get groups$(): Observable<Group[]> {
     return this.userService.user$.pipe(
-      mergeMap(user => this.db.collection<Group>(`/users/${user.uid}/groups`).snapshotChanges()),
-      map(docs => docs.map(doc => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id })))
+      mergeMap((user) => this.db.collection<Group>(`/users/${user.uid}/groups`).snapshotChanges()),
+      map((docs) => docs.map((doc) => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id })))
     );
   }
 
@@ -24,8 +26,8 @@ export class GroupService {
 
   public group$(id: string): Observable<Group> {
     return this.userService.user$.pipe(
-      mergeMap(user => this.db.doc<Group>(`/users/${user.uid}/groups/${id}`).snapshotChanges()),
-      map(doc => ({ ...doc.payload.data(), id: doc.payload.id }))
+      mergeMap((user) => this.db.doc<Group>(`/users/${user.uid}/groups/${id}`).snapshotChanges()),
+      map((doc) => ({ ...doc.payload.data(), id: doc.payload.id }))
     );
   }
 
@@ -33,24 +35,24 @@ export class GroupService {
     return this.userService.user$
       .pipe(
         take(1),
-        mergeMap(user => this.db.doc<Group>(`/users/${user.uid}/groups/${group.id}`).set(group))
+        mergeMap((user) => this.db.doc<Group>(`/users/${user.uid}/groups/${group.id}`).set(group))
       )
-      .subscribe();
+      .toPromise();
   }
 
   public remove(group: Group) {
     return this.userService.user$
       .pipe(
         take(1),
-        mergeMap(user => this.db.doc<Group>(`/users/${user.uid}/groups/${group.id}`).delete())
+        mergeMap((user) => this.db.doc<Group>(`/users/${user.uid}/groups/${group.id}`).delete())
       )
-      .subscribe();
+      .toPromise();
   }
 
   public members$(group: Group): Observable<Member[]> {
     return this.userService.user$.pipe(
-      mergeMap(user => this.db.collection<Member>(`/users/${user.uid}/groups/${group.id}/members`).snapshotChanges()),
-      map(docs => docs.map(doc => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id })))
+      mergeMap((user) => this.db.collection<Member>(`/users/${user.uid}/groups/${group.id}/members`).snapshotChanges()),
+      map((docs) => docs.map((doc) => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id })))
     );
   }
 
@@ -60,7 +62,7 @@ export class GroupService {
     }
     return this.userService.user$.pipe(
       take(1),
-      mergeMap(user =>
+      mergeMap((user) =>
         this.db.collection<Member>(`/users/${user.uid}/groups/${group.id}/members`).add({ ...member, id: this.generateId() })
       )
     );
@@ -70,8 +72,47 @@ export class GroupService {
     return this.userService.user$
       .pipe(
         take(1),
-        mergeMap(user => this.db.doc<Member>(`/users/${user.uid}/groups/${group.id}/members/${member.id}`).delete())
+        mergeMap((user) => this.db.doc<Member>(`/users/${user.uid}/groups/${group.id}/members/${member.id}`).delete())
       )
-      .subscribe();
+      .toPromise();
+  }
+
+  public random(group: Group) {
+    return this.members$(group)
+      .pipe(
+        take(1),
+        map((members) => members[random(0, members.length - 1)]),
+        tap((member) =>
+          this.snackBar.open(member.label, 'X', {
+            duration: 5000,
+          })
+        )
+      )
+      .toPromise();
+  }
+
+  public purposes$(group: Group): Observable<Purpose[]> {
+    return this.userService.user$.pipe(
+      mergeMap((user) => this.db.collection<Purpose>(`/users/${user.uid}/groups/${group.id}/purposes`).snapshotChanges()),
+      map((docs) => docs.map((doc) => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id, group })))
+    );
+  }
+
+  public purposeUses$(purpose: Purpose): Observable<Member[]> {
+    return this.userService.user$.pipe(
+      mergeMap((user) =>
+        this.db.collection<Member>(`/users/${user.uid}/groups/${purpose.group.id}/purposes/${purpose.id}/uses`).snapshotChanges()
+      ),
+      map((docs) => docs.map((doc) => ({ ...doc.payload.doc.data(), id: doc.payload.doc.id })))
+    );
+  }
+
+  deletePurpose(purpose: Purpose) {
+    return this.userService.user$
+      .pipe(
+        take(1),
+        mergeMap((user) => this.db.doc<Member>(`/users/${user.uid}/groups/${purpose.group.id}/purposes/${purpose.id}`).delete())
+      )
+      .toPromise();
   }
 }

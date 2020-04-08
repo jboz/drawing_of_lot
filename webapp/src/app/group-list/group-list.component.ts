@@ -8,7 +8,7 @@ import { GroupService } from '../domain/group.service';
 @Component({
   selector: 'app-group-list',
   templateUrl: './group-list.component.html',
-  styleUrls: ['./group-list.component.scss']
+  styleUrls: ['./group-list.component.scss'],
 })
 export class GroupListComponent implements OnInit {
   displayedColumns = ['name', 'actions'];
@@ -34,6 +34,10 @@ export class GroupListComponent implements OnInit {
 
   remove(group: Group) {
     this.groupService.remove(group);
+  }
+
+  random(group: Group) {
+    this.groupService.random(group);
   }
 
   create() {
