@@ -10,8 +10,8 @@ export const handler = (requested: Request, response: Response) => {
     response.status(400).send();
   }
   return byGroupId(userId, requested.params.groupId, token, requested.query.purpose)
-    .then(member => response.status(200).send(member))
-    .catch(error => {
+    .then((members) => response.status(200).send(members))
+    .catch((error) => {
       if (error instanceof UnauthorizedError) {
         response.status(403).send();
       } else if (error instanceof TooManyResultError) {
