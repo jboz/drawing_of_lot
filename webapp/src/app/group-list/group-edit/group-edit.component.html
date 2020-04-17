@@ -18,7 +18,7 @@
       <mat-card formGroupName="member" class="mat-elevation-z5">
         <mat-card-actions fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
           <mat-form-field fxFlex="1 1 auto">
-            <input matInput placeholder="Nom du nouveau membre" formControlName="label" autofocus (keyup.enter)="addMember()" />
+            <input matInput placeholder="Nom du nouveau membre" formControlName="label" (keyup.enter)="addMember()" />
           </mat-form-field>
           <button mat-icon-button (click)="addMember()" color="primary"><mat-icon>add</mat-icon></button>
         </mat-card-actions>
